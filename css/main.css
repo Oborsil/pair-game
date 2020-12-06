@@ -3,6 +3,16 @@
      padding: 0;
      box-sizing: border-box;
      background-color: rgb(41, 201, 255);
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+ }
+
+ .textPanel {
+     text-align: center;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 60;
+     font-size: 1.5em;
+     text-transform: uppercase;
+     color: aliceblue;
  }
 
  .playing-card {
@@ -23,9 +33,13 @@
     transform-style: preserve-3d;
 
  }
- .playing-card:hover .flip-card {
+ a.visibleCard > .playing-card .flip-card {
     transform: rotateY(-180deg); 
  } 
+
+ .card-front.visible {
+    transform: rotateY(-180deg);
+ }
 
  .card-front {
      background-color: rgb(255, 255, 255);
@@ -56,8 +70,9 @@
 } 
 
 .container {
-    width: 100%;
-    display: flex;
+    width: 700px;
+    display: block;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
 }  
